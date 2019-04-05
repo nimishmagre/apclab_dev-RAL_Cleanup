@@ -1,0 +1,8 @@
+prefix=/home/nimish/apclab_dev-RAL_Cleanup/devel
+
+Name: robotiq_c_model_control
+Description: Description of robotiq_c_model_control
+Version: 1.0.0
+Cflags: -I/home/nimish/apclab_dev-RAL_Cleanup/devel/include -I/home/nimish/apclab_dev-RAL_Cleanup/src/hardware_drivers/arg2f_driver/robotiq_c_model_control/include
+Libs: -L/home/nimish/apclab_dev-RAL_Cleanup/devel/lib 
+Requires: rospy message_runtime roscpp robotiq_ethercat

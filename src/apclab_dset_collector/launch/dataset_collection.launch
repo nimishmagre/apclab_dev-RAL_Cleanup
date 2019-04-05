@@ -1,0 +1,4 @@
+<launch>
+  <!-- launch dataset collection node -->
+  <node name="databot" pkg="dataset_collection" type="test_move.py" />
+</launch>

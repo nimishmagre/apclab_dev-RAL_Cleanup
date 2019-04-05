@@ -1,0 +1,8 @@
+prefix=/home/nimish/apclab_dev-RAL_Cleanup/install
+
+Name: arg2f_gazebo
+Description: Description of arg2f_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nimish/apclab_dev-RAL_Cleanup/install/lib 
+Requires: 

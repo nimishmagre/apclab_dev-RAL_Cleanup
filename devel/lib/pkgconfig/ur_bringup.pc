@@ -1,0 +1,8 @@
+prefix=/home/nimish/apclab_dev-RAL_Cleanup/devel
+
+Name: ur_bringup
+Description: Description of ur_bringup
+Version: 1.2.0
+Cflags: 
+Libs: -L/home/nimish/apclab_dev-RAL_Cleanup/devel/lib 
+Requires: 

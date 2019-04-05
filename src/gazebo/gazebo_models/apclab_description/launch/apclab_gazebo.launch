@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="gui" default="true"/>
+
+  <!-- startup simulated world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find apclab_description)/worlds/no_shadow.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  <param name="robot_description" command="$(find xacro)/xacro $(find apclab_description)/urdf/apclab.urdf.xacro" />
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot" respawn="false" output="screen" />
+
+  <!-- <param name="cube_description" command="$(find xacro)/xacro $(find apclab_description)/urdf/colour_cube.urdf.xacro" />
+  <node name="spawn_cube1" pkg="gazebo_ros" type="spawn_model" args="-urdf -param cube_description -model cube1" respawn="false" output="screen" /> -->
+
+  <param name="cube_description" command="$(find xacro)/xacro $(find apclab_description)/urdf/colour_cube3.urdf.xacro" />
+  <node name="spawn_cubes" pkg="gazebo_ros" type="spawn_model" args="-urdf -param cube_description -model cubes" respawn="false" output="screen" />
+
+  <include file="$(find ur_gazebo)/launch/controller_utils.launch"/>
+  <rosparam file="$(find arg2f_gazebo)/controller/gripper_controller_arg2f.yaml" command="load"/>
+  <node name="gripper_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn gripper_controller" respawn="false" output="screen"/>
+
+  <rosparam file="$(find ur_gazebo)/controller/arm_controller_ur5.yaml" command="load"/>
+  <node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn arm_controller" respawn="false" output="screen"/> -->
+
+</launch>

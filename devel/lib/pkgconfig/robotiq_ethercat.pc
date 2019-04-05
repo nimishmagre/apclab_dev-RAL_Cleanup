@@ -1,0 +1,8 @@
+prefix=/home/nimish/apclab_dev-RAL_Cleanup/devel
+
+Name: robotiq_ethercat
+Description: Description of robotiq_ethercat
+Version: 0.1.0
+Cflags: -I/home/nimish/apclab_dev-RAL_Cleanup/src/hardware_drivers/arg2f_driver/robotiq_ethercat/include
+Libs: -L/home/nimish/apclab_dev-RAL_Cleanup/devel/lib -lrobotiq_ethercat
+Requires: soem roscpp

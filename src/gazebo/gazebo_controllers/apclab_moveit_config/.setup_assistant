@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: apclab_gazebo
+    relative_path: urdf/apclab.urdf.xacro
+  SRDF:
+    relative_path: config/apc_lab.srdf
+  CONFIG:
+    author_name: Zheyu Zhuang
+    author_email: zheyu.zhuang@anu.edu.au
+    generated_timestamp: 1516695058

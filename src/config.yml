@@ -1,0 +1,27 @@
+# This file keeps all key parameters of the scene set-up
+# measured in meters
+table_height: '0.7125'
+grasp_offset: '0.06'
+cube_length: '0.08'
+cube2table_offset: '0.0327' # 1/4 of cube side length + 1/2 table surface thickness
+
+# Control hyper parameters
+t_scale: '6' # translation scaling factor
+low_lyap_threshold: '0.65'
+
+# Camera Intrinsics
+cam_f: '688.0'
+cam_res:
+  - '1024.0'
+  - '768.0'
+
+# Camera Extrinsics
+cam_quat:
+  - '0.137950261431'
+  - '0.137949754712'
+  - '-0.69352113304'
+  - '0.6935185856'
+cam_trans:
+  - '0.0'
+  - '1.73'
+  - '1.59'
