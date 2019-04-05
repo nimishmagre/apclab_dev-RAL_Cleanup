@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- send robot urdf to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find arg2f_description)/urdf/arg2f_140.urdf.xacro" />
+
+</launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Loading Controllers -->
+  <include file="$(find apclab_description)/launch/apclab_gazebo.launch"/>
+  <!-- <include file="$(find apclab_moveit_config)/launch/armbot_moveit_planning_execution.launch"/> -->
+  <node pkg = "apclab_control" name="arm2home" type="arm2home_sim.py" output="screen"/>
+</launch>

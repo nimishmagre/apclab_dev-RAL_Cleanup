@@ -1,0 +1,8 @@
+prefix=/home/nimish/apclab_dev-RAL_Cleanup/devel
+
+Name: robotiq_modbus_rtu
+Description: Description of robotiq_modbus_rtu
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/nimish/apclab_dev-RAL_Cleanup/devel/lib 
+Requires: rospy

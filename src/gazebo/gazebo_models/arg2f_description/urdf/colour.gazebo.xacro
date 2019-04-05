@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="base_colour" params="prefix">
+    <gazebo reference="${prefix}arg2f_base_link">
+      <material>Gazebo/Black</material>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="outer_finger_colour" params="prefix fingerprefix">
+    <gazebo reference="${prefix}${fingerprefix}_outer_finger">
+      <material>Gazebo/Black</material>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="tcp_link_colour">
+    <gazebo reference="tcp_link">
+      <material>Gazebo/White</material>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="inner_finger_colour" params="prefix fingerprefix">
+    <gazebo reference="${prefix}${fingerprefix}_inner_finger">
+      <material>Gazebo/Black</material>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="outer_knuckle_colour" params="prefix fingerprefix">
+    <gazebo reference="${prefix}${fingerprefix}_outer_knuckle">
+      <material>Gazebo/Chrome</material>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="inner_knuckle_colour" params="prefix fingerprefix">
+    <gazebo reference="${prefix}${fingerprefix}_inner_knuckle">
+      <material>Gazebo/Black</material>
+    </gazebo>
+  </xacro:macro>
+
+</robot>

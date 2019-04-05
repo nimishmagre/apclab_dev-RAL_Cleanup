@@ -1,0 +1,36 @@
+#	<xacro:include filename="$(find apclab_description)/urdf/pointgrey.gazebo.xacro" />
+#	<xacro:include filename="$(find apclab_description)/urdf/pointgrey_1.gazebo.xacro" />
+line 95 
+<!-- ##################################
+		 			Camera Setup
+	################################## -->
+		<joint name="camera_joint_1" type="fixed">
+			<axis xyz="1 0 0" />
+			<origin xyz="${-1.59} ${0.73} ${camera_pose_z}" rpy="0 ${camera_pitch} -${pi}"/>
+			<parent link="world"/>
+			<child link="camera_link_1"/>
+		</joint>
+		
+
+	<!-- Camera -->
+		<link name="camera_link_1">
+			<collision>
+				<origin xyz="0 0 0" rpy="-${pi/2} ${pi} -${pi/2}"/>
+				<geometry>
+					<box size="0.4 0.01 0.04"/>
+				</geometry>
+			</collision>
+
+			<visual>
+				<origin xyz="0 0 0" rpy="-${pi/2} ${pi} -${pi/2}"/>
+				<geometry>
+					<mesh filename="package://apclab_description/meshes/r200.dae"/>
+				</geometry>
+			</visual>
+
+			<inertial>
+				<mass value="1e-5" />
+				<origin xyz="0 0 0" rpy="0 0 0"/>
+				<inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+			</inertial>
+		</link>

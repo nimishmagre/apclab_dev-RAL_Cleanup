@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="gui" default="true"/>
+
+  <!-- startup simulated world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find apclab_description)/worlds/no_shadow.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  <param name="cube_description" command="$(find xacro)/xacro $(find apclab_description)/urdf/colour_cube.urdf.xacro" />
+  <node name="spawn_blue_cube" pkg="gazebo_ros" type="spawn_model" args="-urdf -param cube_description -model cube" respawn="false" output="screen" />
+
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/nimish/apclab_dev-RAL_Cleanup/install
+
+Name: apclab_moveit_config
+Description: Description of apclab_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/nimish/apclab_dev-RAL_Cleanup/install/lib 
+Requires: 

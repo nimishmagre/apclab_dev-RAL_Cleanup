@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Loading Controllers -->
+  <include file="$(find pointgrey_camera_driver)/launch/camera.launch"/>
+  <include file="$(find ur_modern_driver)/launch/ur5_bringup.launch">
+    <arg name="robot_ip" value="192.168.100.1"/>
+  </include>
+  <node pkg = "apclab_control" name="arm2home" type="ur5_controller.py" output="screen"/>
+</launch>
